@@ -1,6 +1,6 @@
 ### Site info:
 title: Refu's coding shelter
-tagline: 
+tagline: lala
 author: Refu
 email: celestial0523@gmail.com
 description: "Refu's coding shelter" # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
@@ -10,11 +10,11 @@ url: "http://philosopher31.github.io/" # the base hostname & protocol for your s
 locale: en_US
 
 ### Personal info and site tools info:
-twitter_username: yulijia
-github_username:  yulijia
-disqus_shortname: freshman21
+
+github_username:  philosopher31
+disqus_shortname: 
 favicon:     "/images/favicon.ico"
-aboutme: Hi, this is Lijia Yu. I made the Freshman21 theme. Please enjoy it. # these are shown on aboutme-sidebar.
+aboutme: Hi, this is Refu.  # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
 google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
 
@@ -155,12 +155,9 @@ locales:
 ### your Blogroll info, only name can shown on the page.
 
 Blogroll:
-      - name: Freshman
-        href: http://yulijia.net/freshman
-        title: Another Jekyll blog theme
-      - name: author's website
-        href: http://yulijia.net/
-        title: Lijia Yu's website
+      - name: Refu
+        href: http://philosopher31.github.io/
+        title:Refu's coding shelter
 
 
 ### Build settings
