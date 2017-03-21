@@ -12,7 +12,7 @@ locale: en_US
 ### Personal info and site tools info:
 
 github_username:  philosopher31
-disqus_shortname: 
+disqus_shortname: refushelter
 favicon:     "/images/favicon.ico"
 aboutme: Hi, this is Refu.  # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
