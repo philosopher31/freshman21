@@ -22,25 +22,25 @@ public class MyWritable implements Writable {
     private ArrayList<Integer> e;
 
     public MyWritable(){
-		d = new Text();
-		e = new ArrayList<Integer>();
-	}
-	public MyWritable(int a, long b,double c,Text d, ArrayList<Integer> e){
-		this.a = a;
-		this.b = b;
-		this.c = c;
-		this.d = d;
-		this.e = e;
-	}
-	public void write(DataOutput out) throws IOException {
-	    out.writeInt(a);
+	d = new Text();
+	e = new ArrayList<Integer>();
+    }
+    public MyWritable(int a, long b,double c,Text d, ArrayList<Integer> e){
+	this.a = a;
+	this.b = b;
+	this.c = c;
+	this.d = d;
+	this.e = e;
+    }
+    public void write(DataOutput out) throws IOException {
+	out.writeInt(a);
         out.writeLong(b);
         out.writeDouble(c);
         d.write(out);
         out.writeInt(e.size()); // write ArrayList size
-	    for(int data: e) {
-	         out.writeInt(data);
-	    }		 
+	for(int data: e) {
+	    out.writeInt(data);
+	}		 
     }
     public void readFields(DataInput in) throws IOException {
         a = in.readInt();
@@ -48,10 +48,10 @@ public class MyWritable implements Writable {
         c = in.readDouble();
         d.readFields(in);
         int size = in.readInt(); // read ArrayList size
-		e.clear();
-	    for(int i=0;i<size;i++) {
-	    	e.add(in.readInt());
-	    }	 
+	e.clear();
+	for(int i=0;i<size;i++) {
+	    e.add(in.readInt());
+	}	 
     }
 }
 ```
