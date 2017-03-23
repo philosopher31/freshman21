@@ -162,13 +162,14 @@ Blogroll:
         href: http://yulijia.net/
         title: Lijia Yu's website
 
-
+markdown:         redcarpet
+highlighter:      pygments
 ### Build settings
-markdown: kramdown
+#markdown: kramdown
 #highlighter: pygments
-kramdown:
-        input: GFM
-        syntax_highlighter: rouge
-gems: [jekyll-paginate]
-paginate: 5
-excerpt_separator: <!-- more -->
+#kramdown:
+#        input: GFM
+#        syntax_highlighter: rouge
+#gems: [jekyll-paginate]
+#paginate: 5
+#excerpt_separator: <!-- more -->
