@@ -1,0 +1,58 @@
+---
+layout: post
+title: Hadoop - Customize Writable Class
+modified: 2017-03-23
+categories: [Hadoop]
+tags: [Hadoop]
+comments: true
+---
+
+ # [Hadoop] Customize Writable Class
+
+在Hadoop中，很多時候是官方提供的Writable Class(ex: IntWritable, Text)是不夠用的，所以需要自己寫個Class來實作 Writable。
+
+Writable Class最主要的用途在於它是一個可序列化的物件(serializable object)，由於在Hadoop不同階段(Mapper、Combiner、Reducer等)間的資料傳輸，都會把資料轉成byte code(serialize)寫至local disk中，下個階段再從disk中將資料轉回來(deserialize)。所以Writable中就是由Write 實作serialize，readFields實現deserialize。
+以下實作了幾種常用的資料型態 :
+```Java
+public class MyWritable implements Writable {
+    private int a;
+    private long b;
+    private double c;
+    private Text d;
+    private ArrayList<Integer> e;
+
+    public MyWritable(){
+		d = new Text();
+		e = new ArrayList<Integer>();
+	}
+	public MyWritable(int a, long b,double c,Text d, ArrayList<Integer> e){
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.d = d;
+		this.e = e;
+	}
+	public void write(DataOutput out) throws IOException {
+	    out.writeInt(a);
+        out.writeLong(b);
+        out.writeDouble(c);
+        d.write(out);
+        out.writeInt(e.size()); // write ArrayList size
+	    for(int data: e) {
+	         out.writeInt(data);
+	    }		 
+    }
+    public void readFields(DataInput in) throws IOException {
+        a = in.readInt();
+        b = in.readLong();
+        c = in.readDouble();
+        d.readFields(in);
+        int size = in.readInt(); // read ArrayList size
+		e.clear();
+	    for(int i=0;i<size;i++) {
+	    	e.add(in.readInt());
+	    }	 
+    }
+}
+```
+小提醒: 在使用Writalbe時，由於Hadoop會將資料寫至硬碟，使用較大的Class會造成讀寫速度變慢，所以盡量選用適合大小的Class (IntWritable、LongWritable)。
