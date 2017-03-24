@@ -7,7 +7,6 @@ tags: [Hadoop]
 comments: true
 ---
 
- # [Hadoop] Customize Writable Class
 
 在Hadoop中，很多時候是官方提供的Writable Class(ex: IntWritable, Text)是不夠用的，所以需要自己寫個Class來實作 Writable。
 
