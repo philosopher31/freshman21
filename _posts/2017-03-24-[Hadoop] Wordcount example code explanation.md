@@ -8,8 +8,8 @@ comments: true
 ---
 
 
-# Hadoop - Wordcount example code explanation
 Wordcount 就是Hadoop中的Hello World，以下是官方所提供的完整程式碼。
+
 ```Java
 import java.io.IOException;
 import java.util.StringTokenizer;
