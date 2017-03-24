@@ -30,9 +30,10 @@ layout: default
     </header>
     <p class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p>
     <br>
-    <article class="post-content" itemprop="articleBody">
+    <hr />
+   <!-- <article class="post-content" itemprop="articleBody">
       {{ post.content }}
-    </article> <hr />
+    </article> <hr /> --> 
     
     {% endfor %}
   
