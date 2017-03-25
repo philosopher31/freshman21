@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-Wordcount 就是Hadoop中的Hello World，以下是官方所提供的完整程式碼。
+Wordcount就是Hadoop中的Hello World，以下是官方所提供的完整程式碼。
 
 ```java
 import java.io.IOException;
@@ -77,7 +77,7 @@ public class WordCount {
 
 Configuration: 用來讀取Hadoop resource的Class，預設會讀入基本的Hadoop設定。  
 Job: 一個job會包含一個完整的Map-Reduce，需要設定Mapper、Reducer等Class。  
-其中比較需要注意的是 setMapOutputKeyClass 及 setMapOutputValueClass，預設的Mapper ouput key、value與最後Reducer output的Class是一樣的，若沒有在job中設定就改動的話會出現error。  
+其中比較需要注意的是setMapOutputKeyClass及setMapOutputValueClass，預設的Mapper ouput key、value與最後Reducer output的Class是一樣的，若沒有在job中設定就改動的話會出現error。  
 
 ### Mapper function
 
@@ -118,7 +118,7 @@ output (key,value):
 Reducer<Text,IntWritable,Text,IntWritable>
 Reducer<KEYIN,VALUEIN,KEYOUT,VALUEOUT>
 ```
-由於Reduecer的input是承接Mapper的output，所以KEYIN,VALUEIN 需要與 Mapper的 KEYOUT,VALUEOUT相同。  
+由於Reduecer的input是承接Mapper的output，所以KEYIN,VALUEIN需要與Mapper的 KEYOUT,VALUEOUT相同。  
 ```java
 public void reduce(Text key, Iterable<IntWritable> values,
     Context context) throws IOException, InterruptedException {
