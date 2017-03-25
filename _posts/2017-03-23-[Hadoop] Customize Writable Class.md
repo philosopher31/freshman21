@@ -54,4 +54,4 @@ public class MyWritable implements Writable {
     }
 }
 ```
-小提醒: 在使用 Writalb e時，由於 Hadoop 會將資料寫至硬碟，使用較大的 Class 會造成讀寫速度變慢，所以盡量選用適合大小的 Class (IntWritable、LongWritable)。
+小提醒: 在使用 Writalbe時，由於 Hadoop 會將資料寫至硬碟，使用較大的 Class 會造成讀寫速度變慢，所以盡量選用適合大小的 Class (IntWritable、LongWritable)。
