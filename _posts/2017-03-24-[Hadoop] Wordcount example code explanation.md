@@ -72,21 +72,21 @@ public class WordCount {
   }
 }
 ```
-首先我們將這個範例程式碼拆成三個部分解析，最一開始就從main function開始吧!
+首先我們將這個範例程式碼拆成三個部分解析，最一開始就從 main function 開始吧!
 ### Main function
 
-Configuration: 用來讀取Hadoop resource的Class，預設會讀入基本的Hadoop設定。  
-Job: 一個job會包含一個完整的Map-Reduce，需要設定Mapper、Reducer等Class。  
-其中比較需要注意的是setMapOutputKeyClass及setMapOutputValueClass，預設的Mapper ouput key、value與最後Reducer output的Class是一樣的，若沒有在job中設定就改動的話會出現error。  
+Configuration: 用來讀取 Hadoop resourc e的 Class，預設會讀入基本的 Hadoop 設定。  
+Job: 一個 job 會包含一個完整的 Map-Reduce，需要設定 Mapper、Reducer 等 Class。  
+其中比較需要注意的是 setMapOutputKeyClass 及 setMapOutputValueClass，預設的 Mapper ouput key、value 與最後 Reducer output 的 Class 是一樣的，若沒有在 job 中設定就改動的話會出現 error。  
 
 ### Mapper function
 
-在自訂Mapper Class時需要繼承Mapper
+在自訂 Mapper Class 時需要繼承 Mapper
 ```java
 Mapper<Object, Text, Text, IntWritable>
 Mapper<KEYIN,VALUEIN,KEYOUT,VALUEOUT>
 ```
-若沒有在job中設定InputFormat，預設的Class為TextInputFormat<LongWritable, Text>，這個Class規範了如何讀取input file，預設即為將輸入檔案一次讀取一行，key是在檔案中的位置，value則是文字內容。
+若沒有在 job 中設定InputFormat，預設的 Class 為 TextInputFormat<LongWritable, Text>，這個 Class 規範了如何讀取 input file，預設即為將輸入檔案一次讀取一行，key 是在檔案中的位置，value 則是文字內容。
 
 ```java
 StringTokenizer itr = new StringTokenizer(value.toString());
@@ -95,7 +95,7 @@ while (itr.hasMoreTokens()) {
     context.write(word, one);
 }
 ```
-用StringTokenizer將一行文字分割(預設用空白分割)，將key、value包入Writable中傳遞到下個階段。  
+用 StringTokenizer 將一行文字分割(預設用空白分割)，將 key、value 包入 Writable 中傳遞到下個階段。  
 EX:
 input: 
 > I have a pen  
@@ -113,12 +113,12 @@ output (key,value):
 
 ### Reducer function
 
-在自訂Reducer Class時需要繼承Reducer
+在自訂 Reducer Class 時需要繼承 Reducer
 ```java
 Reducer<Text,IntWritable,Text,IntWritable>
 Reducer<KEYIN,VALUEIN,KEYOUT,VALUEOUT>
 ```
-由於Reduecer的input是承接Mapper的output，所以KEYIN,VALUEIN需要與Mapper的 KEYOUT,VALUEOUT相同。  
+由於 Reduecer 的 input 是承接 Mapper 的 output，所以 KEYIN,VALUEIN 需要與 Mapper 的 KEYOUT,VALUEOUT 相同。  
 ```java
 public void reduce(Text key, Iterable<IntWritable> values,
     Context context) throws IOException, InterruptedException {
@@ -130,7 +130,7 @@ public void reduce(Text key, Iterable<IntWritable> values,
     context.write(key, result);
 }
 ```
-reduce function中，key值相同的value會被收集起來成為Iterable<IntWritable> values，對相同key的值作加總並輸出結果。  
+reduce function 中，key 值相同的 value 會被收集起來成為 Iterable<IntWritable> values，對相同 key 的值作加總並輸出結果。  
 EX:
 input:
 > I  [1,1]  
