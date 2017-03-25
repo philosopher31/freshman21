@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-Wordcount就是Hadoop中的Hello World，以下是官方所提供的完整程式碼。
+Wordcount 就是 Hadoop 中的 Hello World，以下是官方所提供的完整程式碼。
 
 ```java
 import java.io.IOException;
