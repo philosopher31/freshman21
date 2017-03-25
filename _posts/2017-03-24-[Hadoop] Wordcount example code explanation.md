@@ -110,7 +110,7 @@ output (key,value):
 > I  1  
 > have  1  
 > an  1  
-> apple  1  
+> apple  1    
 
   
 ### Reducer function
