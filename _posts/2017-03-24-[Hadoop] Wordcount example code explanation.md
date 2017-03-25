@@ -72,20 +72,16 @@ public class WordCount {
   }
 }
 ```
-首先我們將這個範例程式碼拆成三個部分解析，最一開始就從 main function 開始吧!
+首先我們將這個範例程式碼拆成三個部分解析，最一開始就從 main function 開始吧!  
 
 
 ### Main function
-<br/>
-
 Configuration: 用來讀取 Hadoop resource 的 Class，預設會讀入基本的 Hadoop 設定。  
 Job: 一個 job 會包含一個完整的 Map-Reduce，需要設定 Mapper、Reducer 等 Class。  
-其中比較需要注意的是 setMapOutputKeyClass 及 setMapOutputValueClass，預設的 Mapper ouput key、value 與最後 Reducer output 的 Class 是一樣的，若沒有在 job 中設定就改動的話會出現 error。  
+其中比較需要注意的是 setMapOutputKeyClass 及 setMapOutputValueClass，預設的 Mapper ouput key、value 與最後 Reducer output 的 Class 是一樣的，若沒有在 job 中設定就改動的話會出現 error。    
 
 
 ### Mapper function
-<br/>
-
 在自訂 Mapper Class 時需要繼承 Mapper
 ```java
 Mapper<Object, Text, Text, IntWritable>
@@ -101,8 +97,8 @@ while (itr.hasMoreTokens()) {
 }
 ```
 用 StringTokenizer 將一行文字分割(預設用空白分割)，將 key、value 包入 Writable 中傳遞到下個階段。  
-EX:
-input: 
+EX:  
+input:   
 > I have a pen  
 > I have an apple  
 
@@ -116,10 +112,8 @@ output (key,value):
 > an  1  
 > apple  1  
 
-
+  
 ### Reducer function
-<br/>
-
 在自訂 Reducer Class 時需要繼承 Reducer
 ```java
 Reducer<Text,IntWritable,Text,IntWritable>
