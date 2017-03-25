@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-在Hadoop中，很多時候是官方提供的Writable Class(ex: IntWritable, Text)是不夠用的，所以需要自己寫個Class來實作 Writable。
+在Hadoop中，很多時候是官方提供的Writable Class(ex: IntWritable, Text)是不夠用的，所以需要自己寫個Class來實作Writable。
 
 Writable Class最主要的用途在於它是一個可序列化的物件(serializable object)，由於在Hadoop不同階段(Mapper、Combiner、Reducer等)間的資料傳輸，都會把資料轉成byte code(serialize)寫至local disk中，下個階段再從disk中將資料轉回來(deserialize)。所以Writable中就是由Write 實作serialize，readFields實現deserialize。
 以下實作了幾種常用的資料型態 :
