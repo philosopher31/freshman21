@@ -6,7 +6,7 @@ email: celestial0523@gmail.com
 description: "一個清大菸酒生的程式避難所" # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
 #keywords: "Jekyll, theme, Freshman21"
 baseurl:  # the subpath of your site, e.g. /blog/
-url: "http://philosopher31.github.io/" # the base hostname & protocol for your site
+url: "//philosopher31.github.io/" # the base hostname & protocol for your site
 locale: en_US
 
 ### Personal info and site tools info:
@@ -15,7 +15,7 @@ github_username:  philosopher31
 disqus_shortname: refushelter
 favicon:     "/images/favicon.ico"
 aboutme: Hi, this is Refu.  # these are shown on aboutme-sidebar.
-aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
+aboutme_photo: //i.imgur.com/Mdc4szJl.jpg# your photo.
 google_analytics_key: UA-96146140-1 # put YOUR key here to enable tracking! (blank to disable)
 
 
