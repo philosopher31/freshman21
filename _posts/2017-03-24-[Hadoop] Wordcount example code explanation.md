@@ -76,6 +76,7 @@ public class WordCount {
 
 
 ### Main function
+<br/>
 
 Configuration: 用來讀取 Hadoop resource 的 Class，預設會讀入基本的 Hadoop 設定。  
 Job: 一個 job 會包含一個完整的 Map-Reduce，需要設定 Mapper、Reducer 等 Class。  
@@ -83,6 +84,7 @@ Job: 一個 job 會包含一個完整的 Map-Reduce，需要設定 Mapper、Redu
 
 
 ### Mapper function
+<br/>
 
 在自訂 Mapper Class 時需要繼承 Mapper
 ```java
@@ -116,6 +118,7 @@ output (key,value):
 
 
 ### Reducer function
+<br/>
 
 在自訂 Reducer Class 時需要繼承 Reducer
 ```java
