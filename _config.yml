@@ -4,7 +4,7 @@ tagline: 塊陶啊~~~
 author: Refu
 email: celestial0523@gmail.com
 description: "一個清大菸酒生的程式避難所" # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
-#keywords: "Jekyll, theme, Freshman21"
+eywords: "Jekyll, Hadoop, philosopher31"
 baseurl:  # the subpath of your site, e.g. /blog/
 url: "//philosopher31.github.io/" # the base hostname & protocol for your site
 locale: en_US
@@ -156,7 +156,7 @@ locales:
 
 Blogroll:
       - name: Refu
-        href: "http://philosopher31.github.io/"
+        href: "https://philosopher31.github.io/"
         title: Refu's coding shelter
 
 
