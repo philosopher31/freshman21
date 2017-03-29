@@ -22,4 +22,4 @@ comments: true
  
  - 資料量大: 若今天在資料庫中 N=10,000,000，即使解決了維度高的問題，時間複雜度仍是$O(N^2$) ，只要N的值很大，仍然需要花上許多計算時間。若今天我們能透過一個hash函數，讓原本相鄰的點有高機率被映射到同一個bucket中，而相距較遠的點不容易被分到同一個bucket。有了上述的特性，由於相似的點已經被分到同一個bucket內了，我們只需要對同一個bucket內的資料 (Candidate pairs) 做線性搜尋就好了。如此將N分為了很多個子集合(bucket)，針對子集合內的資料作線性搜尋，就能達到接近$O(N$)的效果。而這邊利用到的技術則是LSH(Locality-Sensitive Hashing)
  
-![enter image description here](/images/Find-similar-items-flowchar.jpg)
+![enter image description here](/images/Find-similar-items-flowchar.JPG)
