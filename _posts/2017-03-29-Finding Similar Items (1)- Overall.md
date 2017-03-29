@@ -1,4 +1,11 @@
-## Finding Similar Items (1)- Overall 
+---
+layout: post
+title: Finding Similar Items (1)- Overall 
+modified: 2017-03-29
+categories: [data analytic]
+tags: [lsh,minhash]
+comments: true
+---
 
  在一般低維度的資料中，找尋相似的資料只需要透過線性搜尋(linear search) 以 $O(N^2$) 的時間複雜度去搜尋即可，像在二維的空間中找尋相近的點等。但若對高維度、資料量大的資料進行線性搜尋就會花上過多的時間，而在現今有非常多這類型的應用。  
  如:
