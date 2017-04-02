@@ -1,57 +1,57 @@
 ---
 layout: post
-title: Finding Similar Items (1)- Minhash
+title: Finding Similar Items (2)- Minhash
 modified: 2017-04-02
 categories: [data analytic]
 tags: [minhash,Jaccard similarity]
 comments: true
 ---
 
-這篇文主要會簡介 Jaccard similarity 及 Minhash 的原理、證明及實作方面的技巧。  
+這篇文主要會簡介 Jaccard similarity 及 Minhash 的原理、證明及實作的技巧。  
 
 為了降低資料的維度，且仍能保留相似度(similarity)，我們希望能找到一個hash函數h符合以下兩種特徵:
 
  1. 能將高維度的資料C，映射為較低維度的特徵h(C) (signature)
  2. 維持 $$Sim(C_1,C_2) ≒ Sim(h(C_1),h(C_2))$$
  
->  EX:  
 >  $$C_1 = 10110101$$   
 >  $$C_2 = 10000001$$  
 >  $$h(C_1) = 1011$$  
 >  $$h(C_2) = 1101$$  
 >  $$Sim(C_1,C_2) = \frac{4}{8}$$    
 >  $$Sim(h(C_1),h(C_2)) = \frac{2}{4}$$    
+  
 
 ####  **Jaccard similarity**
 在這邊首先要介紹一種相似度的一種度量方法 Jaccard similarity。這是一個常用於計算集合相似度的方法:  
-> $$Jac(C_1,C_2) = \frac{|C_1∩C_2|}{|C_1∪C_2|}$$  
-> EX:  
+> $$Jac(C_1,C_2) = \frac{|C_1∩C_2|}{|C_1∪C_2|}$$   
 > $$C_1 = \{a,b,c\}$$  
 > $$C_2 = \{a,d\}$$  
 > $$Jac(C_1,C_2) = \frac{1}{4}$$  
- 
+  
+
 #### **Minhash 原理**
 若以 Jaccard similarity 來計算相似度，Minhash 符合了上述的兩個條件，可以幫助我們降維且保留相似度。Minhash 的演算法如下:
 
  1. 首先找出不同文件的 similarity matrix:
-element | $$C_1$$ | $$C_2$$ | 類別
-:---: | :---: | :---: | :---:
-a | 1 | 1 | X
-b | 1 | 0 | Y
-c | 1 | 0 | Y
-d | 0 | 1 | Y
-e | 0 | 0 | Z
+| element | $$C_1$$ | $$C_2$$ | 類別 |
+|:---:|:---:|:---:|:---:|
+| a | 1 | 1 | X |
+| b | 1 | 0 | Y |
+| c | 1 | 0 | Y |
+| d | 0 | 1 | Y |
+| e | 0 | 0 | Z |
 row 代表的是 element，column 代表的是集合(文件)。  
 若值為1代表集合內包含該元素，0則是不包含。$$C_1 = {a,b,c}$$,$$C_2 = {a,d}$$
 
  2. 隨機調換順序
-element | $$C_1$$ | $$C_2$$ | 類別
-:---: | :---: | :---: | :---:
-e | 0 | 0 | Z
-b | 1 | 0 | Y
-a | 1 | 1 | X
-c | 1 | 0 | Y
-d | 0 | 1 | Y
+| element | $$C_1$$ | $$C_2$$ | 類別 |
+|:---:|:---:|:---:|:---:|
+| e | 0 | 0 | Z |
+| b | 1 | 0 | Y |
+| a | 1 | 1 | X |
+| c | 1 | 0 | Y |
+| d | 0 | 1 | Y |
 
  3. 以每個集合裡第一個 element 為特徵(signature)。
  $$h(C_1)=b$$, $$h(C_2)=a$$
@@ -61,7 +61,9 @@ d | 0 | 1 | Y
  若元素有M個(M-dimension)，選取K<M，即可達到降維。
 
 #### **Minhash 證明**
-Minhash 的演算法，看起來非常簡單，但卻能維持相似度，有$$P(Minhash(C_­1) = Minhash(C_2)) = Jac(C_1,C_2)$$的結論，以下簡單的證明一下這個結論。
+Minhash 的演算法看起來非常簡單，但卻能維持相似度  
+並有$$P(Minhash(C_­1) = Minhash(C_2)) = Jac(C_1,C_2)$$的結論，  
+以下簡單的證明一下這個結論。
 
 首先我們對 row 的組合分成3種類別:
 1. X: 均為1，在兩個集合中皆包含此元素，如a。
