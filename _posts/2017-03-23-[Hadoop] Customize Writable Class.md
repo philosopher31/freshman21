@@ -4,6 +4,7 @@ title: Hadoop - Customize Writable Class
 modified: 2017-03-23
 categories: [Hadoop]
 tags: [Hadoop]
+excerpt: 在 Hadoop 中，很多時候是官方提供的 Writable Class是不夠用的，所以需要自己寫個 Class 來實作 Writable。本文將介紹如何實作客製化的Writable Class。
 comments: true
 ---
 

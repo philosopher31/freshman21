@@ -4,6 +4,7 @@ title: Finding Similar Items (2)- Minhash
 modified: 2017-04-02
 categories: [data analytic]
 tags: [minhash,Jaccard similarity]
+excerpt: 這篇文主要會簡介 Jaccard similarity 及 Minhash 的原理、證明及實作的技巧。  
 comments: true
 ---
 

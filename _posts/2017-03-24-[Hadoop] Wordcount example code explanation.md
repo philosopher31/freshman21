@@ -4,6 +4,7 @@ title: Hadoop - Wordcount example code explanation
 modified: 2017-03-24
 categories: [Hadoop]
 tags: [Hadoop]
+excerpt: Wordcount 就是 Hadoop 中的 Hello World，本文將這個範例程式碼拆成三個部分解析，main function、Mapper、Reducer,並且針對中Wordcount範例中沒有，但實作時常發生的錯誤講解。  
 comments: true
 ---
 
