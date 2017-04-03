@@ -28,7 +28,7 @@ layout: default
       </time>
       </p>
     </header>
-    <p class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p>
+    <p class="description">{% if post.excerpt %}{{ post.excerpt | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p>
     <br>
     <hr />
    <!-- <article class="post-content" itemprop="articleBody">
