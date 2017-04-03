@@ -4,7 +4,7 @@ title: Finding Similar Items (2)- Minhash
 modified: 2017-04-02
 categories: [data analytic]
 tags: [minhash,Jaccard similarity]
-excerpt: 這篇文主要會簡介 Jaccard similarity 及 Minhash 的原理、證明及實作的技巧。  
+excerpt: 這篇文主要會簡介 Jaccard similarity 及 Minhash 的原理、證明及實作的技巧。 為了降低資料的維度，且仍能保留相似度(similarity)，我們希望能找到一個hash函數h符合以下兩種特徵:1. 能將高維度的資料C，映射為較低維度的特徵h(C) (signature)  2. 維持 Sim(C1,C2) ≒ Sim(h(C1),h(C2))  
 comments: true
 ---
 

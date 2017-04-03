@@ -4,7 +4,7 @@ title: Hadoop - Customize Writable Class
 modified: 2017-03-23
 categories: [Hadoop]
 tags: [Hadoop]
-excerpt: 在 Hadoop 中，很多時候是官方提供的 Writable Class是不夠用的，所以需要自己寫個 Class 來實作 Writable。本文將介紹如何實作客製化的Writable Class。
+excerpt: 本文將介紹如何實作客製化的Writable Class。在 Hadoop 中，很多時候是官方提供的 Writable Class是不夠用的，所以需要自己寫個 Class 來實作 Writable。Writable Class 最主要的用途在於它是一個可序列化的物件 (serializable object)，由於在 Hadoop 不同階段 (Mapper、Combiner、Reducer 等)間的資料傳輸，都會把資料轉成 byte code(serialize)寫至 local dis k中，下個階段再從 disk 中將資料轉回來(deserialize)。所以 Writable 中就是由 Write 實作serialize，readFields 實現 deserialize。
 comments: true
 ---
 
