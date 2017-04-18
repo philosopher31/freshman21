@@ -7,43 +7,63 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>https://philosopher31.github.io/</loc>
-  <lastmod>2017-03-29T06:01:48+00:00</lastmod>
+  <loc>https://refu0523.github.io/</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://philosopher31.github.io/archives/</loc>
-  <lastmod>2017-03-29T06:01:48+00:00</lastmod>
+  <loc>https://refu0523.github.io/archives/</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://philosopher31.github.io/categories/</loc>
-  <lastmod>2017-03-29T06:01:48+00:00</lastmod>
+  <loc>https://refu0523.github.io/categories/</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://philosopher31.github.io/tags/</loc>
-  <lastmod>2017-03-29T06:01:48+00:00</lastmod>
+  <loc>https://refu0523.github.io/tags/</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://philosopher31.github.io/guestbook/</loc>
-  <lastmod>2017-03-29T06:01:48+00:00</lastmod>
+  <loc>https://refu0523.github.io/guestbook/</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://philosopher31.github.io/data%20analytic/2017/03/29/Finding-Similar-Items-(1)-Overall.html</loc>
-  <lastmod>2017-03-29T06:01:48+00:00</lastmod>
+  <loc>https://refu0523.github.io/data%20analytic/2017/04/18/Frequency-itemset-mining-(1)-Overall.html</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://philosopher31.github.io/hadoop/2017/03/24/Hadoop-Wordcount-example-code-explanation.html</loc>
-  <lastmod>2017-03-29T06:01:48+00:00</lastmod>
+  <loc>https://refu0523.github.io/data%20analytic/2017/04/10/Finding-Similar-Items-(3)-LSH.html</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://philosopher31.github.io/hadoop/2017/03/23/Hadoop-Customize-Writable-Class.html</loc>
-  <lastmod>2017-03-29T06:01:48+00:00</lastmod>
+  <loc>https://refu0523.github.io/data%20analytic/2017/04/02/Finding-Similar-Items-(2)-Minhash.html</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://refu0523.github.io/data%20analytic/2017/03/29/Finding-Similar-Items-(1)-Overall.html</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://refu0523.github.io/hadoop/2017/03/24/Hadoop-Wordcount-example-code-explanation.html</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://refu0523.github.io/page2/</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://refu0523.github.io/hadoop/2017/03/23/Hadoop-Customize-Writable-Class.html</loc>
+  <lastmod>2017-04-18T15:49:37+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>
